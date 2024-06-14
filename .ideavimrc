@@ -1,0 +1,110 @@
+"" Base Settings
+"" ========================================================
+set scrolloff=10
+set relativenumber
+set showmode
+set showcmd
+set smartcase
+set incsearch
+set hlsearch
+set visualbell
+
+" Use system clipboard
+" set clipboard+=unnamed   
+set clipboard=unnamedplus
+let mapleader = " "
+
+
+"" Plugin Settings
+"" ========================================================
+
+set surround
+set highlightedyank
+set nerdtree
+
+" Easymotion settings
+set easymotion
+set notimeout
+
+
+
+"" Key mappings
+"" ========================================================
+
+
+" Tab navigation
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+" alt cursor movement ins mode 
+inoremap <A-h> <C-o>h
+inoremap <A-l> <C-o>l
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <S-A-i> <C-o>I
+inoremap <S-A-a> <C-o>A
+inoremap <S-A-o> <C-o>O
+inoremap <A-o> <C-o>o
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+
+" Popup navigation
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+
+"" Leader commands
+"" ========================================================
+
+" Comment lines
+map <leader>c <action>(CommentByLineComment)
+
+" Jump around with easymotion
+map <leader>j <Plug>(easymotion-s)
+
+" Open NERDTree (use q to exit)
+map <leader>n :NERDTreeFind<CR>
+map <C-n> :NERDTree<CR>
+
+" Folding
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+" Display options
+"map <leader>dd <action>(ToggleDistractionFreeMode)
+"map <leader>dd <action>(ToggleZenMode)
+"map <leader>dd <action>(ToggleFullScreen)
+
+" Actions
+" map <leader>ss <action>(ShowIntentionActions)
+" map <leader>w <action>(ShowErrorDescription)
+map <leader>u <action>(RiderUnitTestRunContextAction)
+map <leader>k <action>(ShowHoverInfo)
+" map <leader>as <action>(SearchEverywhere)
+
+" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader><leader> <Action>(RecentFiles)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" Refactoring
+" map <leader>rm <Action>(ExtractMethod)
+" map <leader>r <Action>(Refactorings.QuickListPopupAction)
+map <leader>r <Action>(ShowIntentionActions)
+
+" Go to code
+nmap gi <Action>(GotoImplementation)
+nmap gu <Action>(ShowUsages)
+
+
+" Errors
+map <leader>t <Action>(ReSharperGotoNextErrorInSolution)
+" map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+
