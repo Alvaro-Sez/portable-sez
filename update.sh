@@ -10,6 +10,7 @@ echo "everything up to date"
 
 cd $SCRIPT_DIR > /dev/null
 
+git diff
 git add .
 git commit -m "updating config"
 
