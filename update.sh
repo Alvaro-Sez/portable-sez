@@ -6,12 +6,11 @@ cp ~/.tmux.conf $SCRIPT_DIR/.tmux.conf
 cp ~/.config/nvim/init.vim  $SCRIPT_DIR/init.vim
 cp ~/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 
-echo "everything up to date"
-
 cd $SCRIPT_DIR > /dev/null
 
 git diff
 git add .
-git commit -m "updating config"
+DATE=$(date)
+git commit -m "updating config $DATE"
 
 cd "-" > /dev/null
