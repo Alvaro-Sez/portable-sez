@@ -8,6 +8,9 @@ cp ~/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 
 echo "everything up to date"
 
+cd $SCRIPT_DIR
+
 git add .
 git commit -m "updating config"
-git log --oneline
+
+cd "-"
