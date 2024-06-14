@@ -1,5 +1,3 @@
-"" Base Settings
-"" ========================================================
 set scrolloff=10
 set relativenumber
 set showmode
