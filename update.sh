@@ -7,3 +7,7 @@ cp ~/.config/nvim/init.vim  $SCRIPT_DIR/init.vim
 cp ~/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 
 echo "everything up to date"
+
+git add .
+git commit -m "updating config"
+git log --oneline

@@ -1,3 +1,4 @@
+" just testing
 set number 
 set relativenumber
 set hidden
