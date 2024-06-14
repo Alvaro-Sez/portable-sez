@@ -11,6 +11,6 @@ cd $SCRIPT_DIR > /dev/null
 git diff
 git add .
 DATE=$(date)
-git commit -m "updating config $DATE"
+git commit -m "update: $DATE"
 
 cd "-" > /dev/null
