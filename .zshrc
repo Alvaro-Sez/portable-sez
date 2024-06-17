@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias v="nvim"
-alias r="nohup rider > /dev/null 2>&1 &"
+alias dotmem="nohup dotMemory > /dev/null 2>&1 &"
 alias c="~/.config"
 alias src="source ~/.zshrc"
 alias bkup="~/sez-setup/update.sh"
@@ -158,3 +158,4 @@ source $ZSH/oh-my-zsh.sh
 #
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
+export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)
