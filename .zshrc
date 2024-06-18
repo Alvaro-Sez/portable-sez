@@ -8,33 +8,16 @@ alias bkup="~/sez-setup/update.sh"
 alias clay="~/workspace/clay"
 alias connect="~/workspace/clay/ks-connect"
 alias connect-cd="~/workspace/clay/cd/ks-connect"
-
-
-
 alias ws="~/workspace"
-alias lib="~/Library"
-alias postman="nohup postman > /dev/null 2>&1 &"
-alias pass="vim ~/pass.txt"
 
-jqv () {
-  if  jq -e . >/dev/null 2>&1 <<< $(cat "$1"); then
-    echo "parsed successfully"
-  else
-    echo "could not parse json string"
-  fi
-}
 # docker aliases
 alias dils="docker images"
 alias dcls="docker container ls"
 
 # git aliases
-#log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-#alias gslog="git log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'"
 alias gslog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 alias checkout='git checkout $(git branch | fzf)'
 alias git-compare='git log --oneline | fzf --height=50% | awk "{print \$1}" | xargs -I "{}" git diff {}~ {}'
-
-
 
 alias gs="git status"
 alias gd="git diff"
@@ -59,8 +42,6 @@ export ZSH="$HOME/.oh-my-zsh"
 bindkey '^ ' autosuggest-accept
 bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
 bindkey -s '^o' '~\n'
-# Path to Go
-export PATH=$PATH:/usr/local/go/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -166,6 +147,5 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)
