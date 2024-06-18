@@ -10,6 +10,7 @@ alias connect="~/workspace/clay/ks-connect"
 alias connect-cd="~/workspace/clay/cd/ks-connect"
 alias ws="~/workspace"
 
+
 # docker aliases
 alias dils="docker images"
 alias dcls="docker container ls"
@@ -63,7 +64,9 @@ if type rg &> /dev/null; then
   #export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*'"
 fi
 
-export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*' -o -type d"
+# export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*' -o -type d"
+export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
+
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1"
 
 

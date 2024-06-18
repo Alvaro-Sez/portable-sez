@@ -18,7 +18,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y 
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*.
-nnoremap <leader>ff :GFiles .<CR>
+nnoremap <leader>ff :Files .<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
 call plug#begin()
