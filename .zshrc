@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias v="nvim"
 alias dotmem="nohup dotMemory > /dev/null 2>&1 &"
+alias jm="nohup jmeter > /dev/null 2>&1 &"
 alias c="~/.config"
 alias src="source ~/.zshrc"
 alias bkup="~/sez-setup/update.sh"
