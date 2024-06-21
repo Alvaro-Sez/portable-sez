@@ -32,7 +32,8 @@ function gc() { git commit -m $@ ;}
 
 function origin() { 
 	local repository=$(git remote -v | awk -F: NR==2'{print $2}' | sed 's/ (push)//')
-	nohup brave-browser "https://gitlab.com/$repository" > /dev/null 2>&1 &
+    local domain=$(git remote -v | awk -F@ '{print $2}' | awk -F. '{print $1}' | head -n 1)
+	nohup brave-browser "https://$domain.com/$repository" > /dev/null 2>&1 &
 }
 
 
