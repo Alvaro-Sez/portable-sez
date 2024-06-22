@@ -5,7 +5,7 @@ alias dotmem="nohup dotMemory > /dev/null 2>&1 &"
 alias jm="nohup jmeter > /dev/null 2>&1 &"
 alias c="~/.config"
 alias src="source ~/.zshrc"
-alias bkup="~/sez-setup/update.sh"
+alias bkup="~/portable-sez/update.sh"
 alias clay="~/workspace/clay"
 alias connect="~/workspace/clay/ks-connect"
 alias connect-cd="~/workspace/clay/cd/ks-connect"
@@ -38,7 +38,7 @@ function origin() {
 
 
 export PATH="$PATH:/$HOME/.dotnet/tools"
-export PATH="$PATH:/$HOME/sez-setup/gitScripts"
+export PATH="$PATH:/$HOME/portable-sez/gitScripts"
 
 
 # Path to your oh-my-zsh installation.
