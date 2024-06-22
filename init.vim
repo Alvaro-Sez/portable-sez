@@ -21,7 +21,7 @@ nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*.
 nnoremap <leader>ff :Files .<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
-call plug#begin('~/.local/share/nvim/plugged/vim-airline')
+call plug#begin('~/.local/share/nvim/plugged/')
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
