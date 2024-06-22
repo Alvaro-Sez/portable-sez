@@ -42,5 +42,5 @@ echo "Alacritty Installed"
 
 #---- Configuration ----#
 chmod +x ./configure.sh
-. ./configure.sh
+./configure.sh
 # cleaning path
