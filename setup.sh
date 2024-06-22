@@ -11,6 +11,11 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/instal
 chmod +x ./install.sh && ./install.sh && rm install.sh
 unset $CHSH
 unset $RUNZSH
+echo "OhMyZsh Installed"
+
+# installing auto-suggestions zsh pluggin
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+echo "autosuggestions Installed"
 
 # installing neovim
 curl -sSLO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
