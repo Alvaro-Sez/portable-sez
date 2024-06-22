@@ -12,5 +12,5 @@ git diff
 git add .
 DATE=$(date)
 git commit -m "update: $DATE"
-
+git push 
 cd "-" > /dev/null
