@@ -1,3 +1,4 @@
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 # create if not exists
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/nvim
