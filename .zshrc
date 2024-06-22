@@ -37,8 +37,8 @@ function origin() {
 }
 
 
-export PATH="$PATH:/home/sezif/.dotnet/tools"
-export PATH="$PATH:/home/sezif/sez-setup/gitScripts"
+export PATH="$PATH:/$HOME/.dotnet/tools"
+export PATH="$PATH:/$HOME/sez-setup/gitScripts"
 
 
 # Path to your oh-my-zsh installation.

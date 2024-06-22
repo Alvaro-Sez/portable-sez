@@ -10,9 +10,6 @@ cp $SCRIPT_DIR/.tmux.conf $HOME/.tmux.conf
 cp $SCRIPT_DIR/init.vim $HOME/.config/nvim/init.vim  
 cp $SCRIPT_DIR/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
-# git scripts path
-export PATH="$PATH:/$SCRIPT_DIR/gitScripts"
-
 #Install vim pluggins
 nvim -es -u $HOME/.config/nvim/init.vim -i NONE -c "PlugInstall" -c "qa"
 which zsh
