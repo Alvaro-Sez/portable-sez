@@ -12,9 +12,6 @@ chmod +x ./install.sh && ./install.sh && rm install.sh
 unset $CHSH
 unset $RUNZSH
 
-# create .config if not exists
-mkdir -p $HOME/.config
-
 # installing neovim
 curl -sSLO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 rm -rf /opt/nvim
@@ -39,9 +36,5 @@ cargo install alacritty
 echo "Alacritty Installed"
 
 #---- Configuration ----#
-# zsh default shell
-chsh -s zsh
-
-# cleaning path
-export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)
-
+chmod +x ./configure.sh
+./configure.sh
