@@ -12,6 +12,6 @@ cp $SCRIPT_DIR/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
 #Install vim pluggins
 nvim -es -u $HOME/.config/nvim/init.vim -i NONE -c "PlugInstall" -c "qa"
-which zsh
-chsh -s zsh
+ZSH_LOCATION=which zsh
+chsh -s $ZSH_LOCATION
 echo "Configuration applied"
