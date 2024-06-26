@@ -87,6 +87,7 @@ map <leader>k <action>(ShowHoverInfo)
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
+map <leader>pp <action>(PinActiveEditorTab)
 map <leader><leader> <Action>(RecentFiles)
 
 " Close active tab
