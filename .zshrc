@@ -71,6 +71,7 @@ fi
 export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
 
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1"
+ 
 
 
 # Uncomment the following line to use case-sensitive completion.
