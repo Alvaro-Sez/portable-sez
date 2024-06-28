@@ -7,8 +7,8 @@ alias c="~/.config"
 alias src="source ~/.zshrc"
 alias bkup="~/portable-sez/update.sh"
 alias clay="~/workspace/clay"
-alias connect="~/workspace/clay/ks-connect"
-alias connect-cd="~/workspace/clay/cd/ks-connect"
+alias conn="~/workspace/clay/ks-connect"
+alias conncd="~/workspace/clay/cd/ks-connect"
 alias ws="~/workspace"
 
 # docker aliases
