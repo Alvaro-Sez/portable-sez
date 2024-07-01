@@ -8,6 +8,14 @@ cp ~/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 
 cd $SCRIPT_DIR > /dev/null
 
+
+IS_DIFF=$(git --no-pager diff | wc -c)
+
+if [ "$IS_DIFF" -eq 0 ]; then
+    echo "nothing to commit."
+    exit 1
+fi
+
 git diff
 
 read -p "Do you want to commit the changes? (Y/N): " yesorno
