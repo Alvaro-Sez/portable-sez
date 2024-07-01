@@ -10,17 +10,20 @@ cd $SCRIPT_DIR > /dev/null
 
 git diff
 
-echo "do you want to commit?"
-read yesorno
+read -p "Do you want to commit the changes? (Y/N): " yesorno
 
-if [[ $input_string =~ [YN] ]]; then
-    echo "The string contains 'Y' or 'N'."
-else
-    echo "The string does not contain 'Y' or 'N'."
+if [ "$yesorno" = "Y" ] || [ "$yesorno" = "y" ]; then
+    # Place your action for 'Y' here
+    git add .
+    DATE=$(date)
+    git commit -m "update: $DATE"
+    git push 
 fi
 
-git add .
-DATE=$(date)
-git commit -m "update: $DATE"
-git push 
+# Check if the string contains 'N'
+if [ "$yesorno" = "N" ] || [ "$yesorno" = "n" ]; then
+    echo "commiting canceled."
+    # Place your action for 'N' here
+fi
+
 cd "-" > /dev/null
