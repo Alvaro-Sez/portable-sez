@@ -44,7 +44,8 @@ export PATH="$PATH:/$HOME/portable-sez/gitScripts"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 bindkey '^ ' autosuggest-accept
-bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
+bindkey -s '^f' 'fzf --print0 \n'
+#bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
 bindkey -s '^o' '~\n'
 
 # Set name of the theme to load --- if set to "random", it will
@@ -70,10 +71,13 @@ fi
 # export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*' -o -type d"
 export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
 
-export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1"
+export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1 \
+    --preview 'cat {}'  \
+    --bind 'enter:execute(nvim {})' \
+    --color 'fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#778899' "
+
+
  
-
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
