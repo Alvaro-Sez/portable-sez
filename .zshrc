@@ -44,7 +44,8 @@ export PATH="$PATH:/$HOME/portable-sez/gitScripts"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 bindkey '^ ' autosuggest-accept
-bindkey -s '^f' 'fzf --print0 \n'
+bindkey -s '^f' "fzf --print0  --bind 'enter:execute(nvim {})' \n"
+     \
 #bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
 bindkey -s '^o' '~\n'
 
@@ -73,8 +74,9 @@ export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
 
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1 \
     --preview 'cat {}'  \
-    --bind 'enter:execute(nvim {})' \
-    --color 'fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#778899' "
+    --color 'fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#9400D3' "
+# violet: #9400D3
+# grey with blue tones: #778899
 
 
  

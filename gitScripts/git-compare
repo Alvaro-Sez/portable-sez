@@ -1,1 +1,1 @@
-git log --oneline | fzf --height=50% | awk "{print \$1}" | xargs -I "{}" git diff {}~ {}
+git log --oneline | fzf | awk '{print $1}' | xargs -I "{}" git diff {}~ {}

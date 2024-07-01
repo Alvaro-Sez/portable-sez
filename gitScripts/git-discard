@@ -1,1 +1,1 @@
-git status | grep modified | awk -F: '{print $2}' | fzf --height=50%| xargs git restore
+git status | grep modified | awk -F: '{print $2}' | sed 's/^[ \t]*//' | fzf | xargs git restore
