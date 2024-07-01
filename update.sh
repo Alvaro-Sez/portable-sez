@@ -12,7 +12,7 @@ cd $SCRIPT_DIR > /dev/null
 IS_DIFF=$(git --no-pager diff | wc -c)
 
 if [ "$IS_DIFF" -eq 0 ]; then
-    echo "nothing to commit."
+    echo "everything up to date."
     exit 1
 fi
 
