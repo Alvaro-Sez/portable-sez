@@ -20,17 +20,14 @@ git diff
 read -p "Do you want to commit the changes? (Y/N): " yesorno
 
 if [ "$yesorno" = "Y" ] || [ "$yesorno" = "y" ]; then
-    # Place your action for 'Y' here
     git add .
     DATE=$(date)
     git commit -m "update: $DATE"
     git push 
 fi
 
-# Check if the string contains 'N'
 if [ "$yesorno" = "N" ] || [ "$yesorno" = "n" ]; then
     echo "the changes where not commited."
-    # Place your action for 'N' here
 fi
 
 cd "-" > /dev/null
