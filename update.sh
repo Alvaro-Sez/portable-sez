@@ -1,5 +1,5 @@
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
-#
+
 cp $HOME/.zshrc $SCRIPT_DIR/.zshrc
 cp $HOME/.ideavimrc $SCRIPT_DIR/.ideavimrc
 cp $HOME/.tmux.conf $SCRIPT_DIR/.tmux.conf
@@ -7,7 +7,6 @@ cp $HOME/.config/nvim/init.vim  $SCRIPT_DIR/init.vim
 cp $HOME/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 
 cd $SCRIPT_DIR > /dev/null
-
 
 IS_DIFF=$(git --no-pager diff | wc -c)
 
