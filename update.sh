@@ -9,6 +9,16 @@ cp ~/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
 cd $SCRIPT_DIR > /dev/null
 
 git diff
+
+echo "do you want to commit?"
+read yesorno
+
+if [[ $input_string =~ [YN] ]]; then
+    echo "The string contains 'Y' or 'N'."
+else
+    echo "The string does not contain 'Y' or 'N'."
+fi
+
 git add .
 DATE=$(date)
 git commit -m "update: $DATE"
