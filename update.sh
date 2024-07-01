@@ -22,7 +22,7 @@ fi
 
 # Check if the string contains 'N'
 if [ "$yesorno" = "N" ] || [ "$yesorno" = "n" ]; then
-    echo "commiting canceled."
+    echo "the changes where not commited."
     # Place your action for 'N' here
 fi
 
