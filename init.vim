@@ -1,4 +1,3 @@
-" just testing
 set number 
 set relativenumber
 set hidden
@@ -10,6 +9,8 @@ set autoindent
 set smartindent
 set nohlsearch
 set showcmd
+set ignorecase
+set smartcase
 syntax on
 
 let mapleader=" "

@@ -2,6 +2,7 @@ set scrolloff=10
 set relativenumber
 set showmode
 set showcmd
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch

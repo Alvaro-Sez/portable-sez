@@ -74,7 +74,7 @@ export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
 
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1 \
     --preview 'cat {}'  \
-    --color 'fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#9400D3' "
+    --color 'fg:#bbccdd,fg+:#ddeeff,bg:#334455,preview-bg:#223344,border:#778899' "
 # violet: #9400D3
 # grey with blue tones: #778899
 
