@@ -80,7 +80,7 @@ map <leader>zo :action ExpandAllRegions<CR>
 " Actions
 " map <leader>ss <action>(ShowIntentionActions)
 " map <leader>w <action>(ShowErrorDescription)
-map <leader>u <action>(RiderUnitTestRunContextAction)
+map <leader>u <action>(RiderUnitTestQuickListPopupAction)
 map <leader>k <action>(ShowHoverInfo)
 " map <leader>as <action>(SearchEverywhere)
 
