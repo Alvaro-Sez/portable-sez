@@ -19,7 +19,6 @@ alias dcls="docker container ls"
 alias gslog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 #alias checkout='git checkout $(git branch | fzf)'
 #alias git-compare='git log --oneline | fzf --height=50% | awk "{print \$1}" | xargs -I "{}" git diff {}~ {}'
-
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add ."
