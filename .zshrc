@@ -36,8 +36,12 @@ function origin() {
 }
 
 
+#dotnet tools
 export PATH="$PATH:/$HOME/.dotnet/tools"
+#git Scripts
 export PATH="$PATH:/$HOME/portable-sez/gitScripts"
+#python pckgs path
+export PATH="$PATH:/$HOME/.local/bin"
 
 
 # Path to your oh-my-zsh installation.
@@ -163,5 +167,7 @@ source $ZSH/oh-my-zsh.sh
 export JQ_COLORS="2;33:2;33:0;33:0;36:1;32:0;35:1;35:2;34"
 #
 # less env to show color in less and make searching insensitive
+#
+
 export LESS="-Ri"
 export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)
