@@ -23,7 +23,7 @@ nnoremap <leader>ff :Files .<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
 call plug#begin('~/.local/share/nvim/plugged/')
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
