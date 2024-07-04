@@ -159,6 +159,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# jq json colors
+export JQ_COLORS="2;33:2;33:0;33:0;36:1;32:0;35:1;35:2;34"
+#
 # less env to show color in less and make searching insensitive
 export LESS="-Ri"
 export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)

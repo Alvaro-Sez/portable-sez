@@ -2,7 +2,7 @@
 apt update && apt upgrade -y
 
 # utils
-apt install -y git curl htop tmux fzf zsh
+apt install -y git curl htop tmux fzf zsh jq
 
 # installing oh-my-zsh with options
 export CHSH='no'
