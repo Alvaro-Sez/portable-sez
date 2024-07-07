@@ -73,7 +73,24 @@ if type rg &> /dev/null; then
 fi
 
 # export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*' -o -type d"
-export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
+# export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
+PATH_GIT='*/.git'
+PATH_VENV='*/venv'
+PATH_PYCACHE='*/__pycache__'
+PATH_NODE_MODULES='*/node_modules'
+PATH_OBJ='*/obj'
+PATH_BIN='*/bin'
+
+export FZF_DEFAULT_COMMAND="find . \( \
+-path '$PATH_GIT' \
+-o -path '$PATH_VENV' \
+-o -path '$PATH_NODE_MODULES' \
+-o -path '$PATH_BIN' \
+-o -path '$PATH_OBJ' \
+-o -path '$PATH_PYCACHE' \
+\) -prune -o -type f -print"
+
+
 
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --padding=1 \
     --preview 'cat {}'  \
