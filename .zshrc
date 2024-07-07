@@ -74,12 +74,12 @@ fi
 
 # export FZF_DEFAULT_COMMAND="find -L -type f -not -iwholename '*.git*' -o -type d"
 # export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/.git*/*'"
-PATH_GIT='*/.git'
-PATH_VENV='*/venv'
-PATH_PYCACHE='*/__pycache__'
-PATH_NODE_MODULES='*/node_modules'
-PATH_OBJ='*/obj'
-PATH_BIN='*/bin'
+PATH_GIT='*/.git/*'
+PATH_VENV='*/venv/*'
+PATH_PYCACHE='*/__pycache__/*'
+PATH_NODE_MODULES='*/node_modules/*'
+PATH_OBJ='*/obj/*'
+PATH_BIN='*/bin/*'
 
 export FZF_DEFAULT_COMMAND="find . \( \
 -path '$PATH_GIT' \
