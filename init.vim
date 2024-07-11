@@ -26,13 +26,16 @@ call plug#begin('~/.local/share/nvim/plugged/')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
+" Go to mappings
+"nmap <silent> Cd <Plug>(coc-definition)
+"nmap <silent> Ct <Plug>(coc-type-definition)
+"nmap <silent> Cp <Plug>(coc-implementation)
+"nmap <silent> Cr <Plug>(coc-references)
 
 set termguicolors
 colo gruvbox

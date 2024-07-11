@@ -48,7 +48,7 @@ export PATH="$PATH:/$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
 bindkey '^ ' autosuggest-accept
 bindkey -s '^f' "fzf --print0  --bind 'enter:execute(nvim {})' \n"
-     \
+bindkey -s '^z' "fg \n"
 #bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
 bindkey -s '^o' '~\n'
 
