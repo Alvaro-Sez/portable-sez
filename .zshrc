@@ -81,6 +81,7 @@ PATH_PYCACHE='*/__pycache__/*'
 PATH_NODE_MODULES='*/node_modules/*'
 PATH_OBJ='*/obj/*'
 PATH_BIN='*/bin/*'
+PATH_OBS='*/.obsidian/*'
 
 export FZF_DEFAULT_COMMAND="find . \( \
 -path '$PATH_GIT' \
@@ -89,6 +90,7 @@ export FZF_DEFAULT_COMMAND="find . \( \
 -o -path '$PATH_BIN' \
 -o -path '$PATH_OBJ' \
 -o -path '$PATH_PYCACHE' \
+-o -path '$PATH_OBS' \
 \) -prune -o -type f -print"
 
 
