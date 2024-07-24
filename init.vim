@@ -16,7 +16,7 @@ syntax on
 let mapleader=" "
 
 nnoremap <C-s> :w<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <leader>q :bd<CR>
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y 
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*
