@@ -16,6 +16,10 @@ alias ws="~/workspace"
 alias dils="docker images"
 alias dcls="docker container ls"
 
+alias dirm="docker images | fzf | awk '{print $3}' | xargs docker image rm"
+alias dcstop="docker container ls | fzf | awk '{print $1}' | xargs docker container stop"
+alias dclean="docker ps -a | awk NR!=1'{print $1}' | xargs docker container rm"
+
 # git aliases
 alias gslog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 #alias checkout='git checkout $(git branch | fzf)'
@@ -101,8 +105,6 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --pa
 # violet: #9400D3
 # grey with blue tones: #778899
 
-
- 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -159,6 +161,8 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --pa
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 plugins=(zsh-autosuggestions)
+plugins=(fzf)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
