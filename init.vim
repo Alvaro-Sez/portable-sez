@@ -22,8 +22,8 @@ vnoremap <leader>y "+y
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*
 nnoremap <leader>ff :Files .<CR>
 nnoremap <leader>j <Plug>(easymotion-s2)
-nnoremap <leader>n :bn<CR>
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :bn<CR>
+nmap <C-p> :bp<CR>
 
 call plug#begin('~/.local/share/nvim/plugged/')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -33,7 +33,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'easymotion/vim-easymotion'
-
 call plug#end()
 
 " Go to mappings

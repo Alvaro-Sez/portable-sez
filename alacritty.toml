@@ -20,7 +20,7 @@ mods = "Alt"
 chars = "\u001B[C"
 key = "L"
 mods = "Alt"
-
+#
 [[keyboard.bindings]]
 chars = "\u001B[3~"
 key = "X"

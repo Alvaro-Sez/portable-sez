@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias v="nvim"
 alias dotmem="nohup dotMemory > /dev/null 2>&1 &"
-alias obs="nohup obsidian > /dev/null 2>&1 &"
+alias obsidian="nohup obsidian > /dev/null 2>&1 &"
+alias obs="~/Documents/'Obsidian Vault'"
 alias jm="nohup jmeter > /dev/null 2>&1 &"
 alias c="~/.config"
 alias src="source ~/.zshrc"
