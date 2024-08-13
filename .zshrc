@@ -52,7 +52,7 @@ export PATH="$PATH:/$HOME/.local/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-bindkey '^ ' autosuggest-accept
+#bindkey '^ ' autosuggest-accept
 bindkey -s '^f' "fzf --print0  --bind 'enter:execute(nvim {})' \n"
 bindkey -s '^z' "fg \n"
 #bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
@@ -161,7 +161,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --pa
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins=(zsh-autosuggestions)
+#plugins=(zsh-autosuggestions)
 plugins=(fzf)
 
 source $ZSH/oh-my-zsh.sh
