@@ -29,6 +29,7 @@ alias gs="git status"
 alias gd="git diff"
 alias ga="git add ."
 alias gp="git push"
+alias gpf="git push -f"
 function gls(){
 	git ls-tree -r $(git rev-parse --abbrev-ref HEAD) --name-only
 }
@@ -54,8 +55,8 @@ export PATH="$PATH:/$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
 #bindkey '^ ' autosuggest-accept
 bindkey -s '^f' "fzf --print0  --bind 'enter:execute(nvim {})' \n"
-bindkey -s '^z' "fg \n"
-#bindkey -s '^f' 'fzf --print0 | xargs -0 -r -o nvim\n'
+bindkey -s '^z' "fg > /dev/null 2>&1 \n"
+#bindkey -s '^t' ''
 bindkey -s '^o' '~\n'
 
 # Set name of the theme to load --- if set to "random", it will

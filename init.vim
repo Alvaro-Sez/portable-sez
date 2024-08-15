@@ -22,6 +22,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*
 nnoremap <leader>ff :Files .<CR>
 nnoremap <leader>j <Plug>(easymotion-s2)
+nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
 
