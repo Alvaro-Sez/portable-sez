@@ -26,6 +26,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
 
+
 call plug#begin('~/.local/share/nvim/plugged/')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'

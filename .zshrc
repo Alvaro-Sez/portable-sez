@@ -42,6 +42,13 @@ function origin() {
 	nohup brave-browser "https://$domain.com/$repository" > /dev/null 2>&1 &
 }
 
+#azure CLI commands:
+alias az-subscription="az account list | jq -r '.[] | \"\(.name)\"' | fzf | xargs az account set -n "
+
+function az-list() {
+        az servicebus namespace list | jq -r '.[]| "Namespace: \(.name) ResourceGroup: \(.resourceGroup)"' | fzf | awk '{print $2, $4}' | xargs -n 2 bash -c 'az servicebus \'$@' list --namespace-name $1 -g $2' _ | jq -r '.[] | "\(.name)"'
+
+}
 
 #dotnet tools
 export PATH="$PATH:/$HOME/.dotnet/tools"
@@ -56,7 +63,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #bindkey '^ ' autosuggest-accept
 bindkey -s '^f' "fzf --print0  --bind 'enter:execute(nvim {})' \n"
 bindkey -s '^z' "fg > /dev/null 2>&1 \n"
-#bindkey -s '^t' ''
+#bindkey -s '^t' 'tree -L 2'
 bindkey -s '^o' '~\n'
 
 # Set name of the theme to load --- if set to "random", it will
