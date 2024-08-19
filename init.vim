@@ -28,13 +28,16 @@ nmap <C-p> :bp<CR>
 
 
 call plug#begin('~/.local/share/nvim/plugged/')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " To manage lsps
+Plug 'romgrk/barbar.nvim' " Show Buffers as Tabs
+Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for showing file icons in the barbar tabs
+Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status in the barbar tabs
 Plug 'jiangmiao/auto-pairs'
 Plug 'gruvbox-community/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion' " Nice way to move to far places
 call plug#end()
 
 " Go to mappings
