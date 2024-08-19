@@ -29,7 +29,8 @@ set notimeout
 
 "" Key mappings
 "" ========================================================
-
+" allows to replace lines pasting from register, without yaking on deletion
+vnoremap p "_dP
 
 " Tab navigation
 nnoremap <C-o> :action Back<CR>

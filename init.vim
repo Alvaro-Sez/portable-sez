@@ -7,6 +7,7 @@ set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
+set incsearch
 set nohlsearch
 set showcmd
 set ignorecase
@@ -15,6 +16,8 @@ syntax on
 
 let mapleader=" "
 
+" allows to replace lines pasting from register, without yaking on deletion
+vnoremap p "_dP
 nnoremap <C-s> :w<CR>
 nnoremap <leader>q :bd<CR>
 nnoremap <leader>p "+p
@@ -41,10 +44,8 @@ Plug 'easymotion/vim-easymotion' " Nice way to move to far places
 call plug#end()
 
 " Go to mappings
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> Ct <Plug>(coc-type-definition)
-"nnoremap gi <Plug>(coc-implementation)
-"nnoremap gu <Plug>(coc-references)
+nnoremap gi <Plug>(coc-implementation)
+nnoremap gu <Plug>(coc-references)
 
 set termguicolors
 colo gruvbox
