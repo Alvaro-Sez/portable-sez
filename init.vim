@@ -24,7 +24,6 @@ nnoremap <leader>p "+p
 vnoremap <leader>y "+y 
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*
 nnoremap <leader>ff :Files .<CR>
-nnoremap <leader>j <Plug>(easymotion-s2)
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
@@ -40,7 +39,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'easymotion/vim-easymotion' " Nice way to move to far places
 call plug#end()
 
 " Go to mappings
