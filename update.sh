@@ -5,6 +5,7 @@ cp $HOME/.ideavimrc $SCRIPT_DIR/.ideavimrc
 cp $HOME/.tmux.conf $SCRIPT_DIR/.tmux.conf
 cp $HOME/.config/nvim/init.vim  $SCRIPT_DIR/init.vim
 cp $HOME/.config/alacritty/alacritty.toml $SCRIPT_DIR/alacritty.toml
+cp /etc/keyd/keyd.conf $SCRIPT_DIR/keyd.conf
 
 cd $SCRIPT_DIR > /dev/null
 

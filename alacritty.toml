@@ -1,25 +1,25 @@
 [font]
 size = 14.0
 
-[[keyboard.bindings]]
-chars = "\u001B[D"
-key = "H"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001B[B"
-key = "J"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001B[A"
-key = "K"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001B[C"
-key = "L"
-mods = "Alt"
+# [[keyboard.bindings]]
+# chars = "\u001B[D"
+# key = "H"
+# mods = "Alt"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[B"
+# key = "J"
+# mods = "Alt"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[A"
+# key = "K"
+# mods = "Alt"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[C"
+# key = "L"
+# mods = "Alt"
 #
 [[keyboard.bindings]]
 chars = "\u001B[3~"
