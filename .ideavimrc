@@ -75,7 +75,7 @@ map <leader>zo :action ExpandAllRegions<CR>
 
 " Display options
 "map <leader>dd <action>(ToggleDistractionFreeMode)
-"map <leader>dd <action>(ToggleZenMode)
+map <leader>dd <action>(ToggleZenMode)
 "map <leader>dd <action>(ToggleFullScreen)
 
 " Actions
