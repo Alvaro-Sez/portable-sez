@@ -25,8 +25,8 @@ vnoremap <leader>y "+y
 nnoremap <leader>v :vimgrep /<C-r><C-w>/ **/*
 nnoremap <leader>ff :Files .<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
-nmap <C-n> :bn<CR>
-nmap <C-p> :bp<CR>
+nmap <C-n> :BufferNext<CR>
+nmap <C-p> :BufferPrevious<CR>
 
 
 call plug#begin('~/.local/share/nvim/plugged/')
