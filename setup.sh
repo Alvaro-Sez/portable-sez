@@ -30,6 +30,14 @@ curl -fsSLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim -
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "Vim-Plug Installed"
 
+# install keyd
+git clone https://github.com/rvaiya/keyd
+cd keyd
+make && sudo make install
+cd -
+sudo systemctl enable keyd && sudo systemctl start keyd
+
+
 # installing alacritty
 # packages needed for compiling alacritty
 apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
