@@ -37,10 +37,10 @@ nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 
 " alt cursor movement ins mode 
-inoremap <A-h> <C-o>h
-inoremap <A-l> <C-o>l
-inoremap <A-j> <C-o>j
-inoremap <A-k> <C-o>k
+"inoremap <A-h> <C-o>h
+"inoremap <A-l> <C-o>l
+"inoremap <A-j> <C-o>j
+"inoremap <A-k> <C-o>k
 inoremap <S-A-i> <C-o>I
 inoremap <S-A-a> <C-o>A
 inoremap <S-A-o> <C-o>O
