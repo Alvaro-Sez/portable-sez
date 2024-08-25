@@ -26,10 +26,10 @@ size = 14.0
 # key = "X"
 # mods = "Control"
 
-[window]
-decorations = "none"
-startup_mode = "fullscreen"
+# [window]
+# decorations = "none"
+# startup_mode = "fullscreen"
 
-[window.padding]
-x = 0
-y = 0
+# [window.padding]
+# x = 0
+# y = 0

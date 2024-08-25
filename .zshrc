@@ -17,25 +17,14 @@ alias ws="~/workspace"
 alias dils="docker images"
 alias dcls="docker container ls"
 
-alias dirm="docker images | fzf | awk '{print $3}' | xargs docker image rm"
-alias dcstop="docker container ls | fzf | awk '{print $1}' | xargs docker container stop"
-alias dclean="docker ps -a | awk NR!=1'{print $1}' | xargs docker container rm"
-
 # git aliases
 alias gslog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
-#alias checkout='git checkout $(git branch | fzf)'
-#alias git-compare='git log --oneline | fzf --height=50% | awk "{print \$1}" | xargs -I "{}" git diff {}~ {}'
 alias gs="git status"
 alias gd="git diff"
 alias ga="git add ."
 alias gp="git push"
 alias gpf="git push -f"
-function gls(){
-	git ls-tree -r $(git rev-parse --abbrev-ref HEAD) --name-only
-}
-
 function gc() { git commit -m $@ ;}
-
 function origin() { 
 	local repository=$(git remote -v | awk -F: NR==2'{print $2}' | sed 's/ (push)//')
     local domain=$(git remote -v | awk -F@ '{print $2}' | awk -F. '{print $1}' | head -n 1)
@@ -43,12 +32,7 @@ function origin() {
 }
 
 #azure CLI commands:
-alias az-subscription="az account list | jq -r '.[] | \"\(.name)\"' | fzf | xargs az account set -n "
-
-function az-list() {
-        az servicebus namespace list | jq -r '.[]| "Namespace: \(.name) ResourceGroup: \(.resourceGroup)"' | fzf | awk '{print $2, $4}' | xargs -n 2 bash -c 'az servicebus \'$@' list --namespace-name $1 -g $2' _ | jq -r '.[] | "\(.name)"'
-
-}
+alias az-sub="az account list | jq -r '.[] | \"\(.name)\"' | fzf | xargs az account set -n "
 
 #dotnet tools
 export PATH="$PATH:/$HOME/.dotnet/tools"
@@ -70,7 +54,12 @@ bindkey -s '^o' '~\n'
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="frontcube"
+ZSH_THEME="cloud"
+# ZSH_THEME="edvardm"
+# ZSH_THEME="terminalparty"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,7 +89,9 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --pa
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
+#
+# show only user in terminal
+export DEFAULT_USER=$USER
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -152,8 +143,8 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --border --margin=1 --pa
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 #plugins=(zsh-autosuggestions)
+plugins=(git)
 plugins=(fzf)
 
 source $ZSH/oh-my-zsh.sh
