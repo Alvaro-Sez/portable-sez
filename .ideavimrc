@@ -78,6 +78,9 @@ map <leader>zo :action ExpandAllRegions<CR>
 map <leader>dd <action>(ToggleZenMode)
 "map <leader>dd <action>(ToggleFullScreen)
 
+map <leader>oo <action>(RiderManageRecentProjects)
+
+
 " Actions
 " map <leader>ss <action>(ShowIntentionActions)
 " map <leader>w <action>(ShowErrorDescription)
