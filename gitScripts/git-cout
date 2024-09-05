@@ -1,1 +1,1 @@
-git checkout $(git branch -a | fzf --height=50% )
+git checkout $(git branch -a | fzf --height=50% | sed 's#remotes/origin/##' )

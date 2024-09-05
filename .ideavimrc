@@ -37,18 +37,10 @@ nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 
 " alt cursor movement ins mode 
-"inoremap <A-h> <C-o>h
-"inoremap <A-l> <C-o>l
-"inoremap <A-j> <C-o>j
-"inoremap <A-k> <C-o>k
 inoremap <S-A-i> <C-o>I
 inoremap <S-A-a> <C-o>A
 inoremap <S-A-o> <C-o>O
 inoremap <A-o> <C-o>o
-
-" Easy visual indentation
-vnoremap < <gv
-vnoremap > >gv
 
 
 " Popup navigation
@@ -60,7 +52,7 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" ========================================================
 
 " Comment lines
-map <leader>c <action>(CommentByLineComment)
+map gcc <action>(CommentByLineComment)
 
 " Jump around with easymotion
 map <leader>j <Plug>(easymotion-s)
