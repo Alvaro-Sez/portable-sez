@@ -71,6 +71,7 @@ map <leader>dd <action>(ToggleZenMode)
 "map <leader>dd <action>(ToggleFullScreen)
 
 map <leader>oo <action>(RiderManageRecentProjects)
+map <leader>oz <action>(RiderOpenSolution)
 
 
 " Actions
@@ -78,7 +79,6 @@ map <leader>oo <action>(RiderManageRecentProjects)
 " map <leader>w <action>(ShowErrorDescription)
 map <leader>u <action>(RiderUnitTestQuickListPopupAction)
 map <leader>k <action>(ShowHoverInfo)
-map <leader>o <action>(RiderOpenSolution)
 
 " map <leader>as <action>(SearchEverywhere)
 
