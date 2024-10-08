@@ -11,6 +11,10 @@ alias clay="~/workspace/clay"
 alias conn="~/workspace/clay/ks-connect"
 alias ws="~/workspace"
 
+function mrs(){
+    curl -s --header 'PRIVATE-TOKEN: ' 'https://gitlab.com/api/v4/merge_requests?author_id=21561899&state=opened' | jq -r '.[].web_url' | (sleep 2 && fzf --height=50% --preview '') | xargs -I'{}' nohup brave-browser {} > /dev/null 2>&1
+}
+
 # docker aliases
 alias dils="docker images"
 alias dcls="docker container ls"
