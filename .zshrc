@@ -11,8 +11,25 @@ alias clay="~/workspace/clay"
 alias conn="~/workspace/clay/ks-connect"
 alias ws="~/workspace"
 
+#fetch gitlab mrs
+
 function mrs(){
-    curl -s --header 'PRIVATE-TOKEN: ' 'https://gitlab.com/api/v4/merge_requests?author_id=21561899&state=opened' | jq -r '.[].web_url' | (sleep 2 && fzf --height=50% --preview '') | xargs -I'{}' nohup brave-browser {} > /dev/null 2>&1
+    typeset -A mrs_arr
+    local glab_key=$(awk 'NR==15' ~/.nuget/NuGet/NuGet.Config | awk -F\" '{print $4}')
+    local glab_url='https://gitlab.com/api/v4/merge_requests?author_id=21561899&state=opened'
+    local response=$(curl -s --header "PRIVATE-TOKEN: $glab_key" $glab_url| jq -r '.[] | "\(.title)\t\(.web_url)"' )
+
+    while IFS=$'\t' read -r title web_url; do
+        local project=$(echo $web_url | awk -F"/" '{print $7}')
+        local key="$project --> $title"
+        mrs_arr[$key]="$web_url"
+    done < <(printf "%s\n" "$response")
+
+
+    local selected_title=$(printf "%s\n" "${(@k)mrs_arr}" | fzf --height=50% --preview '')
+    if [[ -n "$selected_title" ]]; then
+        nohup brave-browser "${mrs_arr[$selected_title]}" > /dev/null 2>&1
+    fi
 }
 
 # docker aliases
@@ -51,7 +68,7 @@ bindkey -s '^z' "fg \n"
 bindkey -s '^o' '~\n'
 #bindkey -s '^t' 'tree -L 2'
 
-# ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="cloud"
 
 
