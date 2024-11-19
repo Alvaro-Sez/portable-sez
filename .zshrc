@@ -25,7 +25,6 @@ function mrs(){
         mrs_arr[$key]="$web_url"
     done < <(printf "%s\n" "$response")
 
-
     local selected_title=$(printf "%s\n" "${(@k)mrs_arr}" | fzf --height=50% --preview '')
     if [[ -n "$selected_title" ]]; then
         nohup brave-browser "${mrs_arr[$selected_title]}" > /dev/null 2>&1
