@@ -8,8 +8,22 @@ alias c="~/.config"
 alias src="source ~/.zshrc"
 alias bkup="~/portable-sez/update.sh"
 alias clay="~/workspace/clay"
-alias conn="~/workspace/clay/ks-connect"
 alias ws="~/workspace"
+alias ride="rider . > /dev/null 2>&1 &"
+
+function ks() {
+    if [[ "$1" == "cd" ]]; then
+        local cdpath=$(find "$HOME/workspace/clay/cd/ks-connect/" -mindepth 1 -maxdepth 1 -type d | fzf --height=50% --preview '')
+        if [[ -n "$cdpath" ]]; then
+            cd "$cdpath" || return 1
+        fi
+    else
+        local path=$(find "$HOME/workspace/clay/ks-connect/" -mindepth 1 -maxdepth 1 -type d | fzf --height=50% --preview '')
+        if [[ -n "$path" ]]; then
+            cd "$path" || return 1
+        fi
+    fi
+}
 
 #fetch gitlab mrs
 
@@ -108,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
+export PATH=$PATH:/snap/bin
 
 # jq json colors
 export JQ_COLORS="2;33:2;33:0;33:0;36:1;32:0;35:1;35:2;34"

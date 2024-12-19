@@ -103,6 +103,6 @@ nmap gu <Action>(ShowUsages)
 
 
 " Errors
-map <leader>t <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>t <Action>(GotoNextError)
 " map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
 
