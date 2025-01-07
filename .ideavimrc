@@ -59,6 +59,7 @@ map <leader>j <Plug>(easymotion-s)
 
 " Open NERDTree (use q to exit)
 map <leader>n :NERDTreeFind<CR>
+map <leader>c :NERDTreeClose<CR>
 map <C-n> :NERDTree<CR>
 
 " Folding

@@ -131,5 +131,7 @@ export JQ_COLORS="2;33:2;33:0;33:0;36:1;32:0;35:1;35:2;34"
 #
 export LESS="-Ri"
 
+#k9s editor
+ export KUBE_EDITOR=nvim
 # clean duplicated paths 
 export PATH=$(echo $PATH | tr ':' '\n' | sort | uniq | paste -sd:)
