@@ -25,6 +25,11 @@ function ks() {
     fi
 }
 
+function migrations(){
+    local migrations_path=$(find . -type d | grep  Migrations | fzf)
+    cd $migrations_path
+ }
+
 #fetch gitlab mrs
 
 function mrs(){
