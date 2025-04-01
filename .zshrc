@@ -25,6 +25,20 @@ function ks() {
     fi
 }
 
+function cws() {
+    if [[ "$1" == "cd" ]]; then
+        local cdpath=$(find "$HOME/workspace/clay/cd/cws/" -mindepth 1 -maxdepth 1 -type d | fzf --height=50% --preview '')
+        if [[ -n "$cdpath" ]]; then
+            cd "$cdpath" || return 1
+        fi
+    else
+        local path=$(find "$HOME/workspace/clay/cws/" -mindepth 1 -maxdepth 1 -type d | fzf --height=50% --preview '')
+        if [[ -n "$path" ]]; then
+            cd "$path" || return 1
+        fi
+    fi
+}
+
 function migrations(){
     local migrations_path=$(find . -type d | grep  Migrations | fzf)
     cd $migrations_path
